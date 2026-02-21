@@ -42,7 +42,11 @@ async def generate():
         return await send_file(
             audio_buffer, 
             mimetype="audio/mpeg", 
-            download_name="audio.mp3"
+            attachment_filename="audio.mp3", # Cambia download_name por este
+            as_attachment=True               # Añade esto para forzar la descarga
         )
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', port=3333)
