@@ -5,6 +5,7 @@ WORKDIR /app
 # Instalar dependencias de sistema necesarias para audio si hiciera falta
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
+    ffmpeg \
     && rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt .

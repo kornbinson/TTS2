@@ -42,7 +42,7 @@ async def generate():
         return await send_file(
             audio_buffer, 
             mimetype="audio/mpeg", 
-            attachment_filename="audio.mp3"
+            download_name="audio.mp3"
         )
     except Exception as e:
         return jsonify({"error": str(e)}), 500
