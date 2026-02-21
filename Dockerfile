@@ -15,5 +15,5 @@ COPY . .
 
 EXPOSE 3333
 
-# Lanzamos con Uvicorn para máximo rendimiento asíncrono
+# Comando de inicio con Uvicorn (sin espacios extra)
 CMD ["uvicorn", "V3_API:app", "--host", "0.0.0.0", "--port", "3333", "--workers", "1"]

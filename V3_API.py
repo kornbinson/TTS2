@@ -46,7 +46,3 @@ async def generate():
         )
     except Exception as e:
         return jsonify({"error": str(e)}), 500
-
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run("V3_API:app", host="0.0.0.0", port=3333)
